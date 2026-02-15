@@ -1,3 +1,20 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function getComputerChoice(){   // this function gets the computer choice
     let randomNumber = Math.floor(Math.random()*3);
     if(randomNumber === 0){
@@ -49,28 +66,28 @@ function playRound(humanChoice, computerChoice){  // play the round
     }
 }
 
-function playGame(){   // this function make the game of 5 rounds
-    humanScore = 0;
-    computerScore = 0;
-    for(let i = 0; i < 5; i++){
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
-        alert(playRound(humanSelection, computerSelection));
-    }
-    let finalMessage;
-    if(humanScore > computerScore){
-        finalMessage = "You win the game!";
-    }
-    else if (computerScore > humanScore){
-        finalMessage = "Computer wins the game!";
-    }
-    else{
-        finalMessage = "The game is a draw!!";
-    }
-    alert(`Final Score:
-            Human: ${humanScore}
-            Computer: ${computerScore}
+// function playGame(){   // this function make the game of 5 rounds
+//     humanScore = 0;
+//     computerScore = 0;
+//     for(let i = 0; i < 5; i++){
+//         const humanSelection = getHumanChoice();
+//         const computerSelection = getComputerChoice();
+//         alert(playRound(humanSelection, computerSelection));
+//     }
+//     let finalMessage;
+//     if(humanScore > computerScore){
+//         finalMessage = "You win the game!";
+//     }
+//     else if (computerScore > humanScore){
+//         finalMessage = "Computer wins the game!";
+//     }
+//     else{
+//         finalMessage = "The game is a draw!!";
+//     }
+//     alert(`Final Score:
+//             Human: ${humanScore}
+//             Computer: ${computerScore}
 
-            ${finalMessage}`);
-    }
-playGame();  // executes the function
+//             ${finalMessage}`);
+//     }
+// playGame();  // executes the function
