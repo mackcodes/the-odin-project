@@ -8,36 +8,52 @@ The game features an interactive UI with buttons and displays results directly o
 
 ## 📌 Project Overview
 
-This project demonstrates JavaScript DOM manipulation and event handling by building a classic Rock Paper Scissors game.
+This project demonstrates fundamental JavaScript concepts by building a classic Rock Paper Scissors game with a graphical interface.
 
-The player clicks a button to make their choice, the computer randomly selects its move, and the winner of each round is determined using game logic. Scores are tracked live on the page, and the first to reach 5 points wins the game.
+The player selects Rock, Paper, or Scissors by clicking buttons. The computer randomly generates its choice, the winner of each round is determined using game logic, and scores are updated live on the page. The first player to reach 5 points wins the game.
 
 ---
 
 ## 🎮 How the Game Works
 
-1. The player clicks one of three buttons:
+1. The computer randomly chooses:
    - Rock
    - Paper
    - Scissors
 
-2. The computer randomly chooses its move.
+2. The player selects their choice by clicking one of three buttons.
 
-3. The game compares both choices:
+3. The game compares both selections:
    - Rock beats Scissors
    - Scissors beats Paper
    - Paper beats Rock
 
 4. The winner of each round earns 1 point.
 
-5. First player to reach 5 points wins the game!
+5. The running score is displayed after every round.
+
+6. The first player to reach 5 points wins the game, and a final winner message is displayed.
+
+---
+
+## 🖥️ UI Features
+
+- Three interactive buttons for player selection
+- Live round result display
+- Real-time score tracking
+- Automatic winner announcement when 5 points is reached
+- No browser prompts or alerts
+- Fully handled through DOM manipulation
 
 ---
 
 ## 🛠 Technologies Used
 
 - HTML
+- CSS (for styling)
 - JavaScript (Vanilla JS)
+- DOM manipulation
+- Event listeners
 
 ---
 
@@ -46,7 +62,7 @@ The player clicks a button to make their choice, the computer randomly selects i
 1. Clone or download the repository.
 2. Open the project folder.
 3. Open `index.html` in your browser.
-4. Follow the prompts to play the game.
+4. Click a button to start playing.
 
 ---
 
@@ -55,17 +71,19 @@ The player clicks a button to make their choice, the computer randomly selects i
 - Functions
 - Parameters and arguments
 - Conditional statements (`if/else`)
-- DOM manipulation (`querySelector`, `textContent`)
-- Event listeners and handling
 - Variables and score tracking
 - `Math.random()` for random selection
-- Basic game logic structure
+- String methods (`toLowerCase()`)
+- Event listeners
+- DOM manipulation
+- Dynamic UI updates
 
 ---
 
 ## 🔮 Possible Improvements
 
-- Add a replay/reset button
-- Improve UI with CSS styling
-- Add animations or sound effects
-- Add visual feedback for winning/losing
+- Add a "Restart Game" button
+- Improve UI styling and animations
+- Add sound effects
+- Display computer choice visually
+- Make the layout responsive
