@@ -8,20 +8,21 @@ A collection of projects built while learning web development through [The Odin 
 
 ### 1. Rock Paper Scissors
 
-A classic Rock Paper Scissors game played in the browser console.
+A classic Rock Paper Scissors game with a simple UI.
 
 **Description:**  
-A simple implementation of the Rock Paper Scissors game where the user plays against the computer. The game takes user input via prompt, generates a random computer choice, and determines the winner of each round.
+An interactive Rock Paper Scissors game where the user plays against the computer. Click one of three buttons (Rock, Paper, or Scissors) to make your move. The first to reach 5 points wins!
 
 **Features:**
+- Interactive UI with clickable buttons
 - Random computer choice generation
-- User input handling with multiple accepted formats (e.g., "rock", "r")
-- Score tracking for both player and computer
+- Live score tracking displayed on page
 - Win/Lose/Draw round determination
+- First to 5 points wins the game
 
 **Tech Used:**
 - HTML5
-- JavaScript
+- JavaScript (DOM manipulation)
 
 **Path:** `rock-paper-scissor/`
 

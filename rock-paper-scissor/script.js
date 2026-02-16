@@ -1,18 +1,19 @@
+const rockBtn = document.querySelector("#rock");
+const paperBtn = document.querySelector("#paper");
+const scissorsBtn = document.querySelector("#scissors");
+
+const roundResult = document.querySelector("#roundResult");
+const pScore = document.querySelector(".pScore");
+const cScore = document.querySelector(".cScore");
+
+rockBtn.addEventListener("click", () => handleClick("rock"));
+paperBtn.addEventListener("click", () => handleClick("paper"));
+scissorsBtn.addEventListener("click", () => handleClick("scissors"));
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+let playerScore = 0;
+let computerScore = 0;
+let gameOver = false;
 
 
 function getComputerChoice(){   // this function gets the computer choice
@@ -28,66 +29,53 @@ function getComputerChoice(){   // this function gets the computer choice
     }
 }
 
-function getHumanChoice(){  // it gets the human choice
-    let userInput = prompt(" Rock, Paper, Scissor"); 
-    userInput = userInput.toLowerCase();  // this is to make the input case-insensitive
-    if(userInput === "rock" || userInput ==="r"){
-        return "rock";
-    }
-    else if(userInput === "paper" || userInput === "p"){
-        return "paper";
-    }
-    else if(userInput === "scissor" || userInput === "s"){
-        return "scissors";
-    }
-    else {
-        return null;
-    }
-}
 
-let humanScore = 0;
-let computerScore = 0;
 
-function playRound(humanChoice, computerChoice){  // play the round
-    if(humanChoice === computerChoice){
-        return `It's a DRAW!!!! You both chose ${humanChoice}.`;
+function playRound(playerSelection){  // play the round
+    if(gameOver) return;
+    const computerChoice = getComputerChoice();
+    if(playerSelection === computerChoice){
+        const drawResponse = `It's a DRAW!!!! You both chose ${playerSelection}.`;
+        return drawResponse;
     }
     else if(
-        (humanChoice === "rock" && computerChoice === "scissors") ||
-        (humanChoice === "paper" && computerChoice === "rock") ||
-        (humanChoice === "scissors" && computerChoice === "paper")
+        (playerSelection === "rock" && computerChoice === "scissors") ||
+        (playerSelection === "paper" && computerChoice === "rock") ||
+        (playerSelection === "scissors" && computerChoice === "paper")
     ) {
-    humanScore++;
-    return `You WIN!!! ${humanChoice} beats ${computerChoice}`;  // fetch the choices
+    playerScore++;
+    const winResponse = `You WIN!!! ${playerSelection} beats ${computerChoice}`;  // fetch the choices
+    return winResponse;
     }
     else {
         computerScore++;
-        return `You LOSE!!! ${computerChoice} beats ${humanChoice}`;
+        const loseResponse = `You LOSE!!! ${computerChoice} beats ${playerSelection}`;
+        return loseResponse;
     }
 }
 
-// function playGame(){   // this function make the game of 5 rounds
-//     humanScore = 0;
-//     computerScore = 0;
-//     for(let i = 0; i < 5; i++){
-//         const humanSelection = getHumanChoice();
-//         const computerSelection = getComputerChoice();
-//         alert(playRound(humanSelection, computerSelection));
-//     }
-//     let finalMessage;
-//     if(humanScore > computerScore){
-//         finalMessage = "You win the game!";
-//     }
-//     else if (computerScore > humanScore){
-//         finalMessage = "Computer wins the game!";
-//     }
-//     else{
-//         finalMessage = "The game is a draw!!";
-//     }
-//     alert(`Final Score:
-//             Human: ${humanScore}
-//             Computer: ${computerScore}
+function updateScoreDisplay(){
+    pScore.textContent = `Player Score: ${playerScore}`;
+    cScore.textContent = `Computer Score: ${computerScore}`;
+}
 
-//             ${finalMessage}`);
-//     }
-// playGame();  // executes the function
+
+function checkGameOver(){
+    if(playerScore === 5){
+        roundResult.textContent = "You won the game!";
+        gameOver = true;
+    }
+    else if(computerScore === 5){
+        roundResult.textContent = "Computer won the game!";
+        gameOver = true;
+    }
+}
+
+function handleClick(selection){
+    const result = playRound(selection);
+    if(!gameOver){
+        roundResult.textContent = result;
+        updateScoreDisplay();
+        checkGameOver();
+    }
+}

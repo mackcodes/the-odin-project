@@ -2,27 +2,26 @@
 
 A browser-based Rock Paper Scissors game built with vanilla JavaScript as part of a learning project.
 
-The game is played entirely through browser prompts and alerts and runs for 5 rounds against the computer.
+The game features an interactive UI with buttons and displays results directly on the page. First to 5 points wins!
 
 ---
 
 ## 📌 Project Overview
 
-This project demonstrates basic JavaScript concepts by building a classic Rock Paper Scissors game.  
+This project demonstrates JavaScript DOM manipulation and event handling by building a classic Rock Paper Scissors game.
 
-The computer randomly selects a choice, the user enters their choice, and the winner of each round is determined using game logic. Scores are tracked, and a final winner is announced after five rounds.
+The player clicks a button to make their choice, the computer randomly selects its move, and the winner of each round is determined using game logic. Scores are tracked live on the page, and the first to reach 5 points wins the game.
 
 ---
 
 ## 🎮 How the Game Works
 
-1. The computer randomly chooses:
-   - rock
-   - paper
-   - scissors
+1. The player clicks one of three buttons:
+   - Rock
+   - Paper
+   - Scissors
 
-2. The player enters their choice using a prompt.
-   - Input is case-insensitive (rock, ROCK, RocK all work).
+2. The computer randomly chooses its move.
 
 3. The game compares both choices:
    - Rock beats Scissors
@@ -31,7 +30,7 @@ The computer randomly selects a choice, the user enters their choice, and the wi
 
 4. The winner of each round earns 1 point.
 
-5. After 5 rounds, the final score is displayed and the overall winner is announced.
+5. First player to reach 5 points wins the game!
 
 ---
 
@@ -56,18 +55,17 @@ The computer randomly selects a choice, the user enters their choice, and the wi
 - Functions
 - Parameters and arguments
 - Conditional statements (`if/else`)
-- Loops
+- DOM manipulation (`querySelector`, `textContent`)
+- Event listeners and handling
 - Variables and score tracking
 - `Math.random()` for random selection
-- String methods (`toLowerCase()`)
 - Basic game logic structure
 
 ---
 
 ## 🔮 Possible Improvements
 
-- Replace prompts and alerts with buttons and on-page display
-- Add better input validation
-- Add a replay option
+- Add a replay/reset button
 - Improve UI with CSS styling
 - Add animations or sound effects
+- Add visual feedback for winning/losing
