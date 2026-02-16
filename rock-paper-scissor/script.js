@@ -60,7 +60,7 @@ function updateScoreDisplay(){
 }
 
 
-function checkGameOver(){
+function checkGameOver(){  // check and displays the round score 
     if(playerScore === 5){
         roundResult.textContent = "You won the game!";
         gameOver = true;
