@@ -71,7 +71,7 @@ function checkGameOver(){
     }
 }
 
-function handleClick(selection){
+function handleClick(selection){   // handles the clicks of the three buttons
     const result = playRound(selection);
     if(!gameOver){
         roundResult.textContent = result;
