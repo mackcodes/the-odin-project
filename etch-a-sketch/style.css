@@ -1,0 +1,7 @@
+#container{
+    display: flex;
+    width: 960px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    background-color: cadetblue;
+}
