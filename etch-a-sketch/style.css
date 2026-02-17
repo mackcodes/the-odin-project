@@ -5,3 +5,8 @@
     flex-wrap: wrap;
     background-color: cadetblue;
 }
+
+.square{
+    border: solid 1px black;
+    box-sizing: border-box;
+}
