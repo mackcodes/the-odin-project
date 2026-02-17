@@ -52,11 +52,19 @@ function createGrid(size){
         newDiv.classList.add("square");
         newDiv.addEventListener("mouseover", () => {
             if(isDrawing){
-                newDiv.style.backgroundColor = "red";
+                newDiv.style.backgroundColor = getRandomColor();
             }
          })
         div.appendChild(newDiv);
     }
 }
+
+function getRandomColor() {   // creates random color for each blocks
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
 
 createGrid(16);  // default grid structure of the page

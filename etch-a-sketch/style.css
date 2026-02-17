@@ -1,12 +1,33 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
 #container{
     display: flex;
     width: 960px;
     box-sizing: border-box;
     flex-wrap: wrap;
-    background-color: cadetblue;
+    background-color:  #F0EDCC;
 }
+
+body{
+    background-color: #328a9e;
+} 
 
 .square{
     border: solid 1px black;
     box-sizing: border-box;
+}
+
+#controls{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    gap: 10px;
+}
+
+#button, #clear {
+    padding: 5px;
+    border-radius: 5px;
 }
